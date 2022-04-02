@@ -1,6 +1,6 @@
 # Deploy MinIO in Distributed Mode
 
-Un déploiement MinIO distribué se compose de 4 disques/volumes ou plus gérés par un ou plusieurs processus de serveur minio, où les processus gèrent la mise en commun des ressources de calcul et de stockage dans une seule ressource de stockage d'objets agrégée. Chaque serveur MinIO dispose d'une image complète de la topologie distribuée, de sorte qu'une application peut se connecter à n'importe quel nœud du déploiement et effectuer des opérations S3.
+Un déploiement MinIO composé de 4 disques/volumes ou plus gérés par un ou plusieurs processus de serveur minio, où les processus gèrent la mise en commun des ressources de calcul et de stockage dans une seule ressource de stockage d'objets agrégée. Chaque serveur MinIO dispose d'une image complète de la topologie distribuée, de sorte qu'une application peut se connecter à n'importe quel nœud du déploiement et effectuer des opérations S3.
 
 ### Formatter les disques via XFS
 ```
