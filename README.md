@@ -37,14 +37,14 @@ mkdir -p /mnt/disk{1,2,3,4}
  # Test the installation.
  docker-compose --version
 ```
-### Install and configure Minio with docker-compose
+### Installer et configurer Minio with docker-compose
 ```
-mkdir /opt/minio
-cd /opt/minio
+cd /opt/
 git clone https://github.com/msounkere/minio-distributed.git
 
-## Custom setting
+## Mettre à jour les valeurs dans le .env
 
+## Sur chacun des noeuds 
 docker-compose pull
 docker-compose up
 ```
