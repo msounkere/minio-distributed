@@ -98,3 +98,8 @@ scrape_configs:
     static_configs:
     - targets: ['s3.toto.ci:443']
 ```
+#### Sur le noeud prometheus faire
+```
+docker-compose pull
+docker-compose up
+```
