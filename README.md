@@ -43,8 +43,10 @@ cd /opt/
 git clone https://github.com/msounkere/minio-distributed.git
 
 ## Mettre à jour les valeurs dans le .env
+```
 
-## Sur chacun des noeuds 
+## Sur chacun des noeuds faire
+```
 docker-compose pull
 docker-compose up
 ```
