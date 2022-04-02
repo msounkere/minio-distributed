@@ -41,8 +41,7 @@ mkdir -p /mnt/disk{1,2,3,4}
 ```
 mkdir /opt/minio
 cd /opt/minio
-wget https://raw.githubusercontent.com/minio/minio/master/docs/orchestration/docker-compose/docker-compose.yaml
-wget https://raw.githubusercontent.com/minio/minio/master/docs/orchestration/docker-compose/nginx.conf
+git clone https://github.com/msounkere/minio-distributed.git
 
 ## Custom setting
 
