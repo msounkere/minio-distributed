@@ -40,8 +40,9 @@ mkdir -p /mnt/disk{1,2,3,4}
 ```
 cd /opt/
 git clone https://github.com/msounkere/minio-distributed.git
-
+```
 ## Avec Docker-compose
+```
 ### Mettre à jour les valeurs dans le .env
 ```
 
