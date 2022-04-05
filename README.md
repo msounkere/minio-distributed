@@ -41,7 +41,8 @@ mkdir -p /mnt/disk{1,2,3,4}
 cd /opt/
 git clone https://github.com/msounkere/minio-distributed.git
 
-## Mettre à jour les valeurs dans le .env
+## Avec Docker-compose
+### Mettre à jour les valeurs dans le .env
 ```
 
 ### Sur chacun des noeuds faire
@@ -49,3 +50,5 @@ git clone https://github.com/msounkere/minio-distributed.git
 docker-compose pull
 docker-compose up
 ```
+
+## Avec Docker-swarm
