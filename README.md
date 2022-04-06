@@ -42,10 +42,8 @@ cd /opt/
 git clone https://github.com/msounkere/minio-distributed.git
 ```
 ## Avec Docker-compose
-```
-### Mettre à jour les valeurs dans le .env
-```
 
+NB : Mttre à jour les valeurs dans le .env
 ### Sur chacun des noeuds faire
 ```
 docker-compose pull
@@ -53,3 +51,14 @@ docker-compose up
 ```
 
 ## Avec Docker-swarm
+Monter le cluster swarm et joindre les différents noeuds
+```
+docker swarm init --advertise-addr "first_node_ip"
+>> Swarm initialized: current node (tj1k4kiz39x8s4jm3gu5rm8ek) is now a manager.
+>> To add a worker to this swarm, run the following command:
+>> docker swarm join --token SWMTKN-1-wwwwwwwwxxxxxxxxxxxxxx first_node_ip:2377
+```
+Sur les autres noeuds faire :
+```
+docker swarm join --token SWMTKN-1-wwwwwwwwxxxxxxxxxxxxxx first_node_ip:2377
+```
