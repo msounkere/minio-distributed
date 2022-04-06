@@ -51,7 +51,7 @@ docker-compose up
 ```
 
 ## Avec Docker-swarm
-Monter le cluster swarm et joindre les différents noeuds
+### Monter le cluster swarm et joindre les différents noeuds
 ```
 docker swarm init --advertise-addr "first_node_ip"
 >> Swarm initialized: current node (tj1k4kiz39x8s4jm3gu5rm8ek) is now a manager.
@@ -61,4 +61,23 @@ docker swarm init --advertise-addr "first_node_ip"
 Sur les autres noeuds faire :
 ```
 docker swarm join --token SWMTKN-1-wwwwwwwwxxxxxxxxxxxxxx first_node_ip:2377
+```
+### Déclarer les secrets de minio
+```
+echo "minioadmin" | docker secret create access_key -
+echo "minioadmin" | docker secret create secret_key -
+```
+### Taguer les différents noeuds pour contraindre les services 
+Ceci permettra aux services de demarrer sur des noeuds specifiques et ainsi eviter toutes corruptions des données
+```
+docker node update --label-add minio-node01=true MINIO01
+docker node update --label-add minio-node02=true MINIO02
+docker node update --label-add minio-node03=true MINIO03
+
+```
+### Lancer le stack
+
+```
+docker stack deploy --compose-file=docker-swarm.yml minio
+
 ```
